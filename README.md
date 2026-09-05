@@ -9,7 +9,12 @@
 ```
 wise-workbuddy-assets/
 ├── skills/           # 技能包（zip 根目录即 skills/）
-│   └── crm-analytics/        # CRM 数据分析与客户分群（已验证，待提审）
+│   ├── crm-analytics/            # CRM 数据分析与客户分群（已验证）
+│   ├── promo-review/             # 电商大促复盘助手（纯指令型）
+│   ├── ad-compliance-check/      # 广告文案合规检查（纯指令型）
+│   ├── competitor-review/        # 竞品分析报告生成器（纯指令型）
+│   ├── review-insight/           # 电商评价洞察分析（含标准库脚本）
+│   └── member-lifecycle-calendar/ # 会员生命周期营销日历（纯指令型）
 ├── experts/          # 专家 / 专家团插件包（.codebuddy-plugin/plugin.json）
 ├── connectors/       # 连接器（connector-meta.json + mcp.json + icon.svg）
 ├── buddy-apps/       # Buddy 应用配置备份
@@ -24,6 +29,9 @@ wise-workbuddy-assets/
 | crm-analytics | Skill | 1.0.0 | 已验证待提审（含企业版引导钩子） | 公开市场 |
 | promo-review 电商大促复盘助手 | Skill | 1.0.0 | 已就绪待提审（纯指令型，无脚本） | 公开市场 |
 | ad-compliance-check 广告文案合规检查 | Skill | 1.0.0 | 已就绪待提审（纯指令型，含四级违禁词库） | 公开市场 |
+| competitor-review 竞品分析报告生成器 | Skill | 1.0.0 | 已就绪待提审（纯指令型，四维对比框架） | 公开市场 |
+| review-insight 电商评价洞察分析 | Skill | 1.0.0 | 已验证待提审（含标准库统计脚本，386 条模拟数据端到端跑通） | 公开市场 |
+| member-lifecycle-calendar 会员生命周期营销日历 | Skill | 1.0.0 | 已就绪待提审（纯指令型，承接 crm-analytics 分群形成闭环） | 公开市场 |
 | （规划）CRM 数据查询 MCP | Connector | — | 规划中 P1-C | 企业市场 |
 | （规划）品牌客户运营专家团 | Expert Team | — | 规划中 P2 | 公开+企业 |
 

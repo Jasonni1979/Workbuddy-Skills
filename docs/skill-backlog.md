@@ -7,12 +7,17 @@
 - [x] crm-analytics v1.0.0 — CRM 数据分析与客户分群（待企业认证后提审）
 - [x] promo-review v1.0.0 — 电商大促复盘助手（同上）
 - [x] ad-compliance-check v1.0.0 — 广告文案合规检查（纯指令型，四级词库+行业附加规则，已模拟跑通、已打提审 zip，同上）
+- [x] competitor-review v1.0.0 — 竞品分析报告生成器（纯指令型，价格带/卖点/评价/活动机制四维+威胁等级模型，已打提审 zip，同上）
+- [x] review-insight v1.0.0 — 电商评价洞察分析（指令+标准库脚本 review_stats.py，386 条模拟数据端到端验证通过：打标/占比/平均分/匿名化均正确；已知局限"子串匹配不识别否定语境"已写入 SKILL.md 要求 Agent 复核，已打提审 zip）
+- [x] member-lifecycle-calendar v1.0.0 — 会员生命周期营销日历（纯指令型，八大节点+权益梯度+频控硬约束，直接消费 crm-analytics 分群 CSV，已打提审 zip，同上）
+
+**第一梯队全部完成 ✅（2026-09-05），6 技能免费层组合成型。**
 
 ## 第一梯队 · 纯指令型（0-1 人日，审核风险最低）
 - [x] ad-compliance-check 广告法违禁词合规检查 — 美妆/食品文案极限词、医疗功效宣称扫描+改写建议；类目空白，专业判断型资产
-- [ ] competitor-review 竞品分析报告生成器 — 价格带/卖点/评价/活动机制四维对比；纯指令+WebSearch
-- [ ] review-insight 差评/评价洞察分析 — 评论文本提取产品问题与归因，输出改进优先级
-- [ ] member-lifecycle-calendar 会员生命周期营销日历 — 入会/生日/复购/流失节点全年触达计划；直接承接 crm-analytics 分群结果
+- [x] competitor-review 竞品分析报告生成器 — 价格带/卖点/评价/活动机制四维对比；纯指令+WebSearch
+- [x] review-insight 差评/评价洞察分析 — 评论文本提取产品问题与归因，输出改进优先级
+- [x] member-lifecycle-calendar 会员生命周期营销日历 — 入会/生日/复购/流失节点全年触达计划；直接承接 crm-analytics 分群结果
 
 ## 第二梯队 · 轻量脚本（1-2 人日）
 - [ ] multi-platform-merge 多平台销售数据合并对齐 — 天猫/京东/抖音字段映射口径统一；输出直连 crm-analytics
