@@ -23,6 +23,7 @@ wise-workbuddy-assets/
 |---|---|---|---|---|
 | crm-analytics | Skill | 1.0.0 | 已验证待提审（含企业版引导钩子） | 公开市场 |
 | promo-review 电商大促复盘助手 | Skill | 1.0.0 | 已就绪待提审（纯指令型，无脚本） | 公开市场 |
+| ad-compliance-check 广告文案合规检查 | Skill | 1.0.0 | 已就绪待提审（纯指令型，含四级违禁词库） | 公开市场 |
 | （规划）CRM 数据查询 MCP | Connector | — | 规划中 P1-C | 企业市场 |
 | （规划）品牌客户运营专家团 | Expert Team | — | 规划中 P2 | 公开+企业 |
 
