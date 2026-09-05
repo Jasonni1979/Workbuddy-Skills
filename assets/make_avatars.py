@@ -149,4 +149,60 @@ def icon_calendar():
 
 for fn in (icon_crm, icon_promo, icon_compliance, icon_competitor, icon_review, icon_calendar):
     fn()
+
+
+# ---------- 7. multi-platform-merge：三源汇聚到一张表 ----------
+def icon_merge():
+    img, d = base_canvas()
+    for y in (140, 236, 332):
+        d.rounded_rectangle([88, y, 196, y + 60], radius=14, outline=WHITE, width=16)
+        d.line([(196, y + 30), (268, 256)], fill=WHITE, width=14)
+    d.rounded_rectangle([268, 168, 424, 344], radius=18, outline=WHITE, width=20)
+    d.line([(268, 224), (424, 224)], fill=WHITE, width=14)
+    d.line([(268, 284), (424, 284)], fill=WHITE, width=14)
+    save(img, "multi-platform-merge.png")
+
+
+# ---------- 8. inventory-alert：箱子 + 警示徽章 ----------
+def icon_inventory():
+    img, d = base_canvas()
+    d.polygon([(256, 96), (400, 168), (256, 240), (112, 168)], outline=WHITE, width=20)
+    d.line([(112, 168), (112, 320)], fill=WHITE, width=20)
+    d.line([(400, 168), (400, 320)], fill=WHITE, width=20)
+    d.line([(256, 240), (256, 392)], fill=WHITE, width=20)
+    d.line([(112, 320), (256, 392)], fill=WHITE, width=20)
+    d.line([(400, 320), (256, 392)], fill=WHITE, width=20)
+    d.ellipse([316, 316, 452, 452], fill=WHITE)
+    d.line([(384, 350), (384, 402)], fill=BRAND, width=20)
+    d.ellipse([375, 416, 393, 434], fill=BRAND)
+    save(img, "inventory-alert.png")
+
+
+# ---------- 9. ecom-daily-report：报表 + 迷你柱状 ----------
+def icon_daily():
+    img, d = base_canvas()
+    d.rounded_rectangle([104, 96, 408, 416], radius=28, outline=WHITE, width=22)
+    d.line([(104, 168), (408, 168)], fill=WHITE, width=18)
+    d.line([(148, 216), (300, 216)], fill=WHITE, width=16)
+    bars = [(152, 320), (216, 272), (280, 344)]
+    for x, y in bars:
+        d.rounded_rectangle([x, y, x + 44, 376], radius=10, fill=WHITE)
+    d.line([(330, 376), (330, 240)], fill=WHITE, width=14)
+    d.polygon([(312, 252), (348, 252), (330, 224)], fill=WHITE)
+    save(img, "ecom-daily-report.png")
+
+
+# ---------- 10. video-script-planner：场记板 + 播放键 ----------
+def icon_video():
+    img, d = base_canvas()
+    d.rounded_rectangle([96, 176, 416, 408], radius=24, outline=WHITE, width=22)
+    d.rounded_rectangle([96, 112, 416, 172], radius=14, outline=WHITE, width=20)
+    for x in (156, 226, 296, 366):
+        d.line([(x, 126), (x, 158)], fill=WHITE, width=16)
+    d.polygon([(224, 244), (224, 348), (316, 296)], fill=WHITE)
+    save(img, "video-script-planner.png")
+
+
+for fn in (icon_merge, icon_inventory, icon_daily, icon_video):
+    fn()
 print("\n输出目录:", OUT)

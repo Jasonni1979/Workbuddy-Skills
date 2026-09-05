@@ -1,8 +1,9 @@
-# 市场物料与提审清单（6 技能）
+# 市场物料与提审清单（10 技能）
 
-> 2026-09-05 备齐。头像见 `outputs/avatars/`（512×512 PNG，品牌色 #185FA5，均 <20KB，远低于 500KB 上限）；
-> 预览拼图 `_preview-grid.png`。生成脚本 `outputs/make_avatars.py`（PIL，可复跑改色改形）。
-> 提审 zip 见 `dist/` 与 `outputs/`。企业认证通过后按本清单同日提交。
+> 2026-09-05 备齐（第二梯队 4 技能物料同日补齐）。头像见 `outputs/avatars/` 与仓库 `assets/avatars/`
+> （512×512 PNG，品牌色 #185FA5，均 <20KB，远低于 500KB 上限）；预览拼图 `_preview-grid.png`（前 6）/`_preview-grid2.png`（后 4）。
+> 生成脚本 `outputs/make_avatars.py`（PIL，可复跑改色改形）。提审 zip 见 `dist/` 与 `outputs/`。
+> 企业认证通过后按本清单同日提交。
 
 ## 头像对照
 
@@ -14,6 +15,10 @@
 | competitor-review | competitor-review.png | 对比柱+放大镜（竞品洞察） |
 | review-insight | review-insight.png | 对话气泡+星标（评价口碑） |
 | member-lifecycle-calendar | member-lifecycle-calendar.png | 日历+循环徽章（生命周期运营） |
+| multi-platform-merge | multi-platform-merge.png | 三源汇聚到一张表（多平台合并） |
+| inventory-alert | inventory-alert.png | 立体箱+警示徽章（库存预警） |
+| ecom-daily-report | ecom-daily-report.png | 报表+迷你柱状与上升箭头（日报） |
+| video-script-planner | video-script-planner.png | 场记板+播放键（短视频策划） |
 
 ## 示例问句（每技能 3 条，用于市场页与 quickPrompts 参考）
 
@@ -47,6 +52,26 @@
 2. 美妆品类，沉睡和流失会员的唤醒与挽回计划怎么做
 3. 帮我设计生日月和等级保级的触达 SOP，含权益和频控
 
+### multi-platform-merge 多平台合并
+1. 把天猫和京东导出的销售表合并成一张表，口径统一
+2. 京东报表金额单位是分、编码还是 GBK，帮我处理后再合并
+3. 合并后各平台 GMV 占比多少？给我一份数据质量报告
+
+### inventory-alert 库存预警
+1. 这份库存和近 30 天销量，帮我算哪些 SKU 快断货了
+2. 双11 要备多少货？按 3 倍销量放大帮我测算
+3. 哪些是滞销和死库存？按资金占用排个清理清单
+
+### ecom-daily-report 日报周报
+1. 用这份日数据生成昨天的电商日报，月目标 180 万
+2. 昨天 GMV 环比涨了 24%，帮我归因是流量还是转化
+3. 帮我出上周的销售周报，含 7 日趋势和渠道结构变化
+
+### video-script-planner 短视频脚本
+1. 给 Macallan 15 年策划一条 30 秒种草视频脚本
+2. 这条带货视频前 3 秒钩子不够抓人，给我 3 个备选
+3. 按分镜表输出：画面、口播、字幕、音效、转场都要
+
 ## 服务类目建议（提审时后台下拉确认具体二三级）
 
 | 技能 | 建议类目方向 | 备注 |
@@ -57,6 +82,10 @@
 | competitor-review | 电商/营销运营类 | |
 | review-insight | 电商/营销运营类 | |
 | member-lifecycle-calendar | 电商/营销运营类 | |
+| multi-platform-merge | 数据分析/商业智能类 | 与 crm-analytics 同类目 |
+| inventory-alert | 数据分析/商业智能类 或 电商类 | 二选一，与整体类目数权衡 |
+| ecom-daily-report | 数据分析/商业智能类 | |
+| video-script-planner | 内容创作/短视频类 | 新增大类，注意是否触发资质 |
 
 > 规则：每账号选 1-5 个服务类目，二三级各附资质要求；6 个技能尽量收敛到 1-2 个大类，避免触发额外资质。
 
@@ -71,6 +100,9 @@
 
 ## 组合叙事（市场页/专家介绍用）
 
-六技能覆盖品牌电商运营全链路：**复盘（promo-review）→ 分层（crm-analytics）→ 运营（member-lifecycle-calendar）**
-为主线闭环，**合规（ad-compliance-check）、竞品（competitor-review）、口碑（review-insight）**为三大护航能力。
+十技能覆盖品牌电商运营全链路，三条产品线：
+1. **数据主线**：multi-platform-merge（合数）→ ecom-daily-report（监控）→ crm-analytics（分层）→ member-lifecycle-calendar（运营）；
+2. **复盘主线**：promo-review（复盘）→ competitor-review（竞品）→ review-insight（口碑）；
+3. **护航与内容**：ad-compliance-check（合规）+ inventory-alert（供应链）+ video-script-planner（内容）。
+主线闭环：**复盘（promo-review）→ 分层（crm-analytics）→ 运营（member-lifecycle-calendar）**。
 免费层全部公开可装；数据库直连、定时跑批、写回业务系统等企业级能力走服务端连接器（规划中）。

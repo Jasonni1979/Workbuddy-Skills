@@ -10,6 +10,10 @@
 - [x] competitor-review v1.0.0 — 竞品分析报告生成器（纯指令型，价格带/卖点/评价/活动机制四维+威胁等级模型，已打提审 zip，同上）
 - [x] review-insight v1.0.0 — 电商评价洞察分析（指令+标准库脚本 review_stats.py，386 条模拟数据端到端验证通过：打标/占比/平均分/匿名化均正确；已知局限"子串匹配不识别否定语境"已写入 SKILL.md 要求 Agent 复核，已打提审 zip）
 - [x] member-lifecycle-calendar v1.0.0 — 会员生命周期营销日历（纯指令型，八大节点+权益梯度+频控硬约束，直接消费 crm-analytics 分群 CSV，已打提审 zip，同上）
+- [x] multi-platform-merge v1.0.0 — 多平台销售数据合并对齐（脚本实测通过，已打提审 zip，同上）
+- [x] inventory-alert v1.0.0 — 库存周转与补货预警（脚本实测通过，已打提审 zip，同上）
+- [x] ecom-daily-report v1.0.0 — 电商数据日报周报自动化（脚本实测通过，已打提审 zip，同上）
+- [x] video-script-planner v1.0.0 — 短视频脚本策划助手（纯指令型，已打提审 zip，同上）
 
 **第一梯队全部完成 ✅（2026-09-05），6 技能免费层组合成型。**
 
@@ -20,10 +24,12 @@
 - [x] member-lifecycle-calendar 会员生命周期营销日历 — 入会/生日/复购/流失节点全年触达计划；直接承接 crm-analytics 分群结果
 
 ## 第二梯队 · 轻量脚本（1-2 人日）
-- [ ] multi-platform-merge 多平台销售数据合并对齐 — 天猫/京东/抖音字段映射口径统一；输出直连 crm-analytics
-- [ ] inventory-alert 库存周转与补货预警 — 周转天数/安全库存/断货风险清单
-- [ ] video-script-planner 直播/短视频脚本策划 — 威士忌业务 SOP 产品化；内容创作类目空白
-- [ ] ecom-daily-report 电商数据日报/周报自动化 — 指标看板+异动归因；高频高粘性
+- [x] multi-platform-merge 多平台销售数据合并对齐 — 天猫/京东/抖音字段映射口径统一；输出直连 crm-analytics。标准库脚本 merge_platforms.py（--inspect 预览/合并/质量报告）；实测：GBK 编码识别、京东"分"→元换算、"合计"汇总行自动过滤、去重计数均正确。修复过 bug：cent 换算曾误伤 qty/uv，已限定仅金额字段
+- [x] inventory-alert 库存周转与补货预警 — 周转天数/安全库存/断货风险清单。标准库脚本 inventory_calc.py（SS=z·σ·√L、ROP、目标水位、五级分级红橙绿黄黑、大促备货 uplift）；实测五级分级全部正确命中、资金占用/断货敞口/滞销占用统计正确
+- [x] video-script-planner 直播/短视频脚本策划 — 威士忌业务 SOP 产品化；内容创作类目空白。纯指令：三段式 SOP（选题卡→黄金结构脚本→逐秒分镜表）+钩子库 8 类+卖点可视化动作库+品类红线自查（酒类理性饮酒字幕位）
+- [x] ecom-daily-report 电商数据日报/周报自动化 — 指标看板+异动归因；高频高粘性。标准库脚本 daily_report.py（环比/同比/月目标进度 vs 时间进度/异动阈值/渠道贡献）；实测 +23.7% 异动正确触发 gmv/orders/uv 三项、量价拆解与渠道贡献线索正确、as_of 无数据时报错防旧数据冒充
+
+**第二梯队全部完成 ✅（2026-09-05），10 技能矩阵成型。第三梯队待企业认证/托管环境决策后启动。**
 
 ## 第三梯队 · 商业化载体（服务端，收费层）
 - [ ] CRM 数据查询 MCP 连接器（P1-C 已规划）— token 鉴权可计量计费

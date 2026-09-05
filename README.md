@@ -14,7 +14,11 @@ wise-workbuddy-assets/
 │   ├── ad-compliance-check/      # 广告文案合规检查（纯指令型）
 │   ├── competitor-review/        # 竞品分析报告生成器（纯指令型）
 │   ├── review-insight/           # 电商评价洞察分析（含标准库脚本）
-│   └── member-lifecycle-calendar/ # 会员生命周期营销日历（纯指令型）
+│   ├── member-lifecycle-calendar/ # 会员生命周期营销日历（纯指令型）
+│   ├── multi-platform-merge/     # 多平台销售数据合并对齐（标准库脚本）
+│   ├── inventory-alert/          # 库存周转与补货预警（标准库脚本）
+│   ├── ecom-daily-report/        # 电商数据日报周报自动化（标准库脚本）
+│   └── video-script-planner/     # 短视频脚本策划助手（纯指令型）
 ├── experts/          # 专家 / 专家团插件包（.codebuddy-plugin/plugin.json）
 ├── connectors/       # 连接器（connector-meta.json + mcp.json + icon.svg）
 ├── buddy-apps/       # Buddy 应用配置备份
@@ -33,6 +37,10 @@ wise-workbuddy-assets/
 | competitor-review 竞品分析报告生成器 | Skill | 1.0.0 | 已就绪待提审（纯指令型，四维对比框架） | 公开市场 |
 | review-insight 电商评价洞察分析 | Skill | 1.0.0 | 已验证待提审（含标准库统计脚本，386 条模拟数据端到端跑通） | 公开市场 |
 | member-lifecycle-calendar 会员生命周期营销日历 | Skill | 1.0.0 | 已就绪待提审（纯指令型，承接 crm-analytics 分群形成闭环） | 公开市场 |
+| multi-platform-merge 多平台销售数据合并对齐 | Skill | 1.0.0 | 已验证待提审（标准库脚本：GBK/分→元/汇总行过滤实测通过） | 公开市场 |
+| inventory-alert 库存周转与补货预警 | Skill | 1.0.0 | 已验证待提审（标准库脚本：五级分级/安全库存/大促备货实测通过） | 公开市场 |
+| ecom-daily-report 电商数据日报周报自动化 | Skill | 1.0.0 | 已验证待提审（标准库脚本：异动阈值/目标进度/渠道贡献实测通过） | 公开市场 |
+| video-script-planner 短视频脚本策划助手 | Skill | 1.0.0 | 已就绪待提审（纯指令型，三段式 SOP+逐秒分镜+品类红线自查） | 公开市场 |
 | （规划）CRM 数据查询 MCP | Connector | — | 规划中 P1-C | 企业市场 |
 | （规划）品牌客户运营专家团 | Expert Team | — | 规划中 P2 | 公开+企业 |
 
