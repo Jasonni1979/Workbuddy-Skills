@@ -5,7 +5,7 @@ import os
 
 from PIL import Image, ImageDraw, ImageFilter
 
-OUT = os.environ.get("AVATAR_OUT", os.path.join(os.path.dirname(os.path.abspath(__file__)), "avatars"))
+OUT = "/Users/wise01/WorkBuddy/2026-09-05-10-17-28/outputs/avatars"
 os.makedirs(OUT, exist_ok=True)
 
 S = 512
@@ -204,5 +204,106 @@ def icon_video():
 
 
 for fn in (icon_merge, icon_inventory, icon_daily, icon_video):
+    fn()
+
+
+# ---------- 行业层徽章（左上角小徽记，主体图形区分行业） ----------
+def industry_badge(d):
+    """行业层技能统一角标：左上角小菱形徽记，标识"行业手册"系列。"""
+    d.polygon([(72, 56), (96, 80), (72, 104), (48, 80)], fill=WHITE)
+
+
+# ---------- 11. beauty-ops：口红 + 星芒 ----------
+def icon_beauty():
+    img, d = base_canvas()
+    industry_badge(d)
+    d.polygon([(208, 244), (208, 200), (240, 140), (272, 200), (272, 244)], outline=WHITE, width=20)
+    d.rectangle([196, 244, 284, 400], outline=WHITE, width=22)
+    d.line([(196, 300), (284, 300)], fill=WHITE, width=14)
+    # 星芒
+    d.line([(360, 160), (360, 220)], fill=WHITE, width=12)
+    d.line([(330, 190), (390, 190)], fill=WHITE, width=12)
+    d.line([(396, 260), (396, 296)], fill=WHITE, width=10)
+    d.line([(378, 278), (414, 278)], fill=WHITE, width=10)
+    save(img, "beauty-ops.png")
+
+
+# ---------- 12. fashion-ops：衣架 + 裙摆 ----------
+def icon_fashion():
+    img, d = base_canvas()
+    industry_badge(d)
+    d.arc([226, 108, 286, 168], start=180, end=20, fill=WHITE, width=16)
+    d.line([(256, 138), (256, 168)], fill=WHITE, width=16)
+    d.line([(256, 168), (140, 240)], fill=WHITE, width=18)
+    d.line([(256, 168), (372, 240)], fill=WHITE, width=18)
+    d.line([(140, 240), (372, 240)], fill=WHITE, width=18)
+    d.polygon([(180, 276), (332, 276), (368, 416), (144, 416)], outline=WHITE, width=20)
+    d.line([(256, 276), (256, 416)], fill=WHITE, width=12)
+    save(img, "fashion-ops.png")
+
+
+# ---------- 13. luxury-ops：钻石 ----------
+def icon_luxury():
+    img, d = base_canvas()
+    industry_badge(d)
+    d.polygon([(156, 200), (256, 128), (356, 200), (256, 400)], outline=WHITE, width=22)
+    d.line([(156, 200), (356, 200)], fill=WHITE, width=16)
+    d.line([(216, 156), (216, 200), (256, 400)], fill=WHITE, width=12)
+    d.line([(296, 156), (296, 200), (256, 400)], fill=WHITE, width=12)
+    d.line([(216, 200), (256, 128)], fill=WHITE, width=12)
+    d.line([(296, 200), (256, 128)], fill=WHITE, width=12)
+    save(img, "luxury-ops.png")
+
+
+# ---------- 14. electronics-ops：芯片 ----------
+def icon_electronics():
+    img, d = base_canvas()
+    industry_badge(d)
+    d.rounded_rectangle([168, 168, 344, 344], radius=24, outline=WHITE, width=22)
+    d.rounded_rectangle([224, 224, 288, 288], radius=10, fill=WHITE)
+    for t in (212, 256, 300):
+        d.line([(t, 120), (t, 168)], fill=WHITE, width=14)
+        d.line([(t, 344), (t, 392)], fill=WHITE, width=14)
+        d.line([(120, t), (168, t)], fill=WHITE, width=14)
+        d.line([(344, t), (392, t)], fill=WHITE, width=14)
+    save(img, "electronics-ops.png")
+
+
+# ---------- 15. sports-ops：山峰 + 攀登折线 ----------
+def icon_sports():
+    img, d = base_canvas()
+    industry_badge(d)
+    # 主峰
+    d.polygon([(120, 400), (256, 150), (392, 400)], outline=WHITE, width=22)
+    # 副峰（自山脊延伸出的第二条山脊线）
+    d.line([(330, 288), (408, 400)], fill=WHITE, width=18)
+    # 雪线
+    d.line([(212, 232), (256, 262), (300, 232)], fill=WHITE, width=14)
+    # 攀登折线（左下→峰顶）
+    d.line([(150, 380), (200, 340), (230, 360), (280, 300)], fill=WHITE, width=12)
+    # 峰顶旗
+    d.line([(256, 150), (256, 96)], fill=WHITE, width=12)
+    d.polygon([(256, 96), (316, 112), (256, 130)], fill=WHITE)
+    save(img, "sports-ops.png")
+
+
+# ---------- 16. liquor-ops：威士忌杯 + 冰块 ----------
+def icon_liquor():
+    img, d = base_canvas()
+    industry_badge(d)
+    # 杯身（上宽下窄梯形，圆角底）
+    d.polygon([(176, 160), (336, 160), (316, 380), (196, 380)], outline=WHITE, width=22)
+    d.line([(196, 380), (316, 380)], fill=WHITE, width=22)
+    # 酒液面
+    d.line([(188, 264), (324, 264)], fill=WHITE, width=16)
+    # 冰块（旋转正方形）
+    d.polygon([(256, 288), (296, 320), (256, 352), (216, 320)], outline=WHITE, width=14)
+    # 香气线（杯口上方两道弧）
+    d.arc([216, 88, 256, 128], start=200, end=340, fill=WHITE, width=12)
+    d.arc([268, 76, 308, 116], start=200, end=340, fill=WHITE, width=12)
+    save(img, "liquor-ops.png")
+
+
+for fn in (icon_beauty, icon_fashion, icon_luxury, icon_electronics, icon_sports, icon_liquor):
     fn()
 print("\n输出目录:", OUT)

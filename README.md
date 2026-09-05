@@ -22,7 +22,9 @@ wise-workbuddy-assets/
 │   ├── beauty-ops/               # 行业层：美妆个护运营手册（纯指令型）
 │   ├── fashion-ops/              # 行业层：快时尚服饰运营手册（纯指令型）
 │   ├── luxury-ops/               # 行业层：轻奢奢品运营手册（纯指令型）
-│   └── electronics-ops/          # 行业层：消费电子运营手册（纯指令型）
+│   ├── electronics-ops/          # 行业层：消费电子运营手册（纯指令型）
+│   ├── sports-ops/               # 行业层：运动户外运营手册（纯指令型）
+│   └── liquor-ops/               # 行业层：酒类运营手册（纯指令型）
 ├── experts/          # 专家 / 专家团插件包（.codebuddy-plugin/plugin.json）
 ├── connectors/       # 连接器（connector-meta.json + mcp.json + icon.svg）
 ├── buddy-apps/       # Buddy 应用配置备份
@@ -51,6 +53,8 @@ wise-workbuddy-assets/
 | fashion-ops 快时尚服饰行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：售罄率模式+波段模型+折扣阶梯） | 公开市场 |
 | luxury-ops 轻奢奢品行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：价格纪律+VIC clienteling+礼赠运营） | 公开市场 |
 | electronics-ops 消费电子行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：贬值型库存+参数合规矩阵+配件复购引擎） | 公开市场 |
+| sports-ops 运动户外行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：装备寿命复购+全渠道四源会员+KOC 运营） | 公开市场 |
+| liquor-ops 酒类行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：广告法酒类红线+礼赠节点+稀缺配额管理） | 公开市场 |
 | （规划）CRM 数据查询 MCP | Connector | — | 规划中 P1-C | 企业市场 |
 | （规划）品牌客户运营专家团 | Expert Team | — | 规划中 P2 | 公开+企业 |
 
