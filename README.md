@@ -19,6 +19,7 @@ wise-workbuddy-assets/
 ├── connectors/       # 连接器（connector-meta.json + mcp.json + icon.svg）
 ├── buddy-apps/       # Buddy 应用配置备份
 ├── docs/             # 平台规格、上架 SOP、审核记录
+├── assets/           # 市场物料：技能头像（512×512）与生成脚本 make_avatars.py
 └── dist/             # 提审 zip 产物（git 忽略，本地生成）
 ```
 
