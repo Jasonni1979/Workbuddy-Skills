@@ -18,7 +18,11 @@ wise-workbuddy-assets/
 │   ├── multi-platform-merge/     # 多平台销售数据合并对齐（标准库脚本）
 │   ├── inventory-alert/          # 库存周转与补货预警（标准库脚本）
 │   ├── ecom-daily-report/        # 电商数据日报周报自动化（标准库脚本）
-│   └── video-script-planner/     # 短视频脚本策划助手（纯指令型）
+│   ├── video-script-planner/     # 短视频脚本策划助手（纯指令型）
+│   ├── beauty-ops/               # 行业层：美妆个护运营手册（纯指令型）
+│   ├── fashion-ops/              # 行业层：快时尚服饰运营手册（纯指令型）
+│   ├── luxury-ops/               # 行业层：轻奢奢品运营手册（纯指令型）
+│   └── electronics-ops/          # 行业层：消费电子运营手册（纯指令型）
 ├── experts/          # 专家 / 专家团插件包（.codebuddy-plugin/plugin.json）
 ├── connectors/       # 连接器（connector-meta.json + mcp.json + icon.svg）
 ├── buddy-apps/       # Buddy 应用配置备份
@@ -28,6 +32,8 @@ wise-workbuddy-assets/
 ```
 
 ## 资产清单
+
+> **两层技能架构**：通用能力层（10 技能，跨行业方法论与工具脚本）× 行业参数层（每行业 1 个运营手册，注入品类基准/合规红线/专属打法，并以"参数注入表"改写通用技能的默认参数）。行业层命名约定 `*-ops`，头像带左上菱形角标。
 
 | 资产 | 类型 | 版本 | 状态 | 目标市场 |
 |---|---|---|---|---|
@@ -41,6 +47,10 @@ wise-workbuddy-assets/
 | inventory-alert 库存周转与补货预警 | Skill | 1.0.0 | 已验证待提审（标准库脚本：五级分级/安全库存/大促备货实测通过） | 公开市场 |
 | ecom-daily-report 电商数据日报周报自动化 | Skill | 1.0.0 | 已验证待提审（标准库脚本：异动阈值/目标进度/渠道贡献实测通过） | 公开市场 |
 | video-script-planner 短视频脚本策划助手 | Skill | 1.0.0 | 已就绪待提审（纯指令型，三段式 SOP+逐秒分镜+品类红线自查） | 公开市场 |
+| beauty-ops 美妆个护行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：功效合规三档+T=60d+参数注入表） | 公开市场 |
+| fashion-ops 快时尚服饰行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：售罄率模式+波段模型+折扣阶梯） | 公开市场 |
+| luxury-ops 轻奢奢品行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：价格纪律+VIC clienteling+礼赠运营） | 公开市场 |
+| electronics-ops 消费电子行业运营手册 | Skill | 1.0.0 | 已就绪待提审（行业层：贬值型库存+参数合规矩阵+配件复购引擎） | 公开市场 |
 | （规划）CRM 数据查询 MCP | Connector | — | 规划中 P1-C | 企业市场 |
 | （规划）品牌客户运营专家团 | Expert Team | — | 规划中 P2 | 公开+企业 |
 
