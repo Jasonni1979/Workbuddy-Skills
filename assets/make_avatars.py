@@ -306,4 +306,124 @@ def icon_liquor():
 
 for fn in (icon_beauty, icon_fashion, icon_luxury, icon_electronics, icon_sports, icon_liquor):
     fn()
+
+
+# ---------- 17. content-matrix-planner：3×3 内容九宫格 + 加号 ----------
+def icon_content_matrix():
+    img, d = base_canvas()
+    cell, gap, x0, y0 = 88, 18, 122, 122
+    for r in range(3):
+        for c in range(3):
+            x, y = x0 + c * (cell + gap), y0 + r * (cell + gap)
+            filled = (r, c) in [(0, 1), (1, 0), (1, 2), (2, 1)]
+            d.rounded_rectangle([x, y, x + cell, y + cell], radius=14,
+                                fill=WHITE if filled else None, outline=WHITE, width=14)
+    save(img, "content-matrix-planner.png")
+
+
+# ---------- 18. cs-ticket-insight：耳麦 + 对话气泡 ----------
+def icon_cs():
+    img, d = base_canvas()
+    # 耳麦：头带弧 + 两侧耳罩
+    d.arc([156, 120, 356, 320], start=180, end=360, fill=WHITE, width=22)
+    d.rounded_rectangle([136, 240, 184, 320], radius=20, fill=WHITE)
+    d.rounded_rectangle([328, 240, 376, 320], radius=20, fill=WHITE)
+    # 麦克风杆
+    d.line([(352, 320), (352, 360), (300, 376)], fill=WHITE, width=14, joint="curve")
+    # 对话气泡（左下）
+    d.rounded_rectangle([112, 348, 252, 424], radius=18, outline=WHITE, width=14)
+    d.polygon([(150, 424), (170, 424), (146, 448)], fill=WHITE)
+    for dx in (140, 170, 200):
+        d.ellipse([dx, 378, dx + 12, 390], fill=WHITE)
+    save(img, "cs-ticket-insight.png")
+
+
+# ---------- 19. return-rate-clinic：退货回环箭头 + 听诊十字 ----------
+def icon_return():
+    img, d = base_canvas()
+    c = (256, 244)
+    # 回环箭头（270° 弧 + 箭头）
+    d.arc([c[0] - 118, c[1] - 118, c[0] + 118, c[1] + 118], start=300, end=240, fill=WHITE, width=24)
+    arrowhead(d, c, 118, 240, 34, WHITE)
+    # 中心十字（诊断）
+    d.rounded_rectangle([c[0] - 20, c[1] - 56, c[0] + 20, c[1] + 56], radius=10, fill=WHITE)
+    d.rounded_rectangle([c[0] - 56, c[1] - 20, c[0] + 56, c[1] + 20], radius=10, fill=WHITE)
+    save(img, "return-rate-clinic.png")
+
+
+# ---------- 20. private-domain-sop：双人 + 对话气泡 ----------
+def icon_private():
+    img, d = base_canvas()
+    # 两人（左大右小）
+    d.ellipse([150, 170, 230, 250], outline=WHITE, width=18)
+    d.arc([130, 260, 250, 380], start=180, end=360, fill=WHITE, width=18)
+    d.line([(130, 320), (130, 380)], fill=WHITE, width=18)
+    d.line([(250, 320), (250, 380)], fill=WHITE, width=18)
+    d.ellipse([286, 200, 346, 260], outline=WHITE, width=14)
+    d.arc([270, 270, 362, 366], start=180, end=360, fill=WHITE, width=14)
+    # 右上对话气泡
+    d.rounded_rectangle([356, 110, 452, 178], radius=16, fill=WHITE)
+    d.polygon([(380, 178), (404, 178), (376, 206)], fill=WHITE)
+    for dx in (378, 402, 426):
+        d.ellipse([dx, 136, dx + 10, 146], fill=BRAND)
+    save(img, "private-domain-sop.png")
+
+
+# ---------- 21. member-oneid-merge：多源汇聚到 ID 徽章 ----------
+def icon_oneid():
+    img, d = base_canvas()
+    # 左侧三个源节点
+    for y in (140, 240, 340):
+        d.rounded_rectangle([96, y - 26, 176, y + 26], radius=12, outline=WHITE, width=14)
+        d.line([(176, y), (252, 244)], fill=WHITE, width=10)
+    # 中央 ID 徽章
+    d.ellipse([252, 176, 388, 312], fill=WHITE)
+    d.ellipse([296, 208, 344, 256], fill=BRAND)
+    d.arc([284, 244, 356, 300], start=180, end=360, fill=BRAND, width=14)
+    # 右侧输出单线 + 右向箭头
+    d.line([(388, 244), (440, 244)], fill=WHITE, width=14)
+    d.polygon([(464, 244), (436, 228), (436, 260)], fill=WHITE)
+    save(img, "member-oneid-merge.png")
+
+
+# ---------- 22. price-governance：价签 + 盾牌对勾 ----------
+def icon_price():
+    img, d = base_canvas()
+    # 价签（旋转 45° 的方牌 + 挂孔）
+    d.polygon([(150, 250), (250, 150), (370, 270), (270, 370)], outline=WHITE, width=20)
+    d.ellipse([232, 176, 268, 212], outline=WHITE, width=12)
+    d.line([(206, 258), (262, 314)], fill=WHITE, width=12)
+    # 盾牌（右上）
+    d.polygon([(388, 120), (452, 144), (452, 200), (420, 240), (388, 200)], outline=WHITE, width=14)
+    d.line([(404, 176), (416, 192), (438, 158)], fill=WHITE, width=12, joint="curve")
+    save(img, "price-governance.png")
+
+
+# ---------- 23. channel-health-score：雷达图 ----------
+def icon_channel():
+    img, d = base_canvas()
+    import math as m
+    c = (256, 256)
+    R = 140
+    # 六边形网格两圈
+    for rr in (R, R * 0.55):
+        pts = [(c[0] + rr * m.cos(m.radians(a)), c[1] + rr * m.sin(m.radians(a)))
+               for a in range(-90, 270, 60)]
+        d.polygon(pts, outline=WHITE, width=10)
+    # 轴线
+    for a in range(-90, 270, 60):
+        d.line([c, (c[0] + R * m.cos(m.radians(a)), c[1] + R * m.sin(m.radians(a)))],
+               fill=WHITE, width=6)
+    # 数据多边形（不规则，填充半透明感用描边+顶点圆）
+    vals = [0.9, 0.55, 0.75, 0.45, 0.85, 0.6]
+    dpts = [(c[0] + R * v * m.cos(m.radians(a)), c[1] + R * v * m.sin(m.radians(a)))
+            for a, v in zip(range(-90, 270, 60), vals)]
+    d.polygon(dpts, outline=WHITE, width=16)
+    for p in dpts:
+        d.ellipse([p[0] - 9, p[1] - 9, p[0] + 9, p[1] + 9], fill=WHITE)
+    save(img, "channel-health-score.png")
+
+
+for fn in (icon_content_matrix, icon_cs, icon_return, icon_private, icon_oneid, icon_price, icon_channel):
+    fn()
 print("\n输出目录:", OUT)

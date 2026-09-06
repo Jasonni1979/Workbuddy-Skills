@@ -1,7 +1,7 @@
-# 市场物料与提审清单（14 技能：通用层 10 + 行业层 4）
+# 市场物料与提审清单（23 技能：通用层 10 + 行业层 6 + 全渠道层 7）
 
-> 2026-09-05 备齐（行业层 4 技能物料同日补齐）。头像见 `outputs/avatars/` 与仓库 `assets/avatars/`
-> （512×512 PNG，品牌色 #185FA5，均 <20KB，远低于 500KB 上限）；预览拼图 `_preview-grid.png`（通用 1-6）/`_preview-grid2.png`（通用 7-10）/`_preview-grid3.png`（行业层 4，左上菱形角标=行业手册系列）。
+> 2026-09-06 备齐（全渠道层 7 技能物料同日补齐）。头像见 `outputs/avatars/` 与仓库 `assets/avatars/`
+> （512×512 PNG，品牌色 #185FA5，均 <20KB，远低于 500KB 上限）；预览拼图 `_preview-grid.png`（通用 1-6）/`_preview-grid2.png`（通用 7-10）/`_preview-grid3.png`（行业层 6，左上菱形角标=行业手册系列）/`_preview-grid4.png`（全渠道层 7）。
 > 生成脚本 `outputs/make_avatars.py`（PIL，可复跑改色改形）。提审 zip 见 `dist/` 与 `outputs/`。
 > 企业认证通过后按本清单同日提交。
 
@@ -23,6 +23,15 @@
 | fashion-ops | fashion-ops.png | 衣架+裙摆+行业角标（快时尚手册） |
 | luxury-ops | luxury-ops.png | 钻石切面+行业角标（轻奢手册） |
 | electronics-ops | electronics-ops.png | 芯片引脚+行业角标（消费电子手册） |
+| sports-ops | sports-ops.png | 山峰+峰顶旗+行业角标（运动户外手册） |
+| liquor-ops | liquor-ops.png | 威士忌杯+冰块+行业角标（酒类手册） |
+| content-matrix-planner | content-matrix-planner.png | 3×3 内容九宫格（种草矩阵） |
+| cs-ticket-insight | cs-ticket-insight.png | 耳麦+对话气泡（客服洞察） |
+| return-rate-clinic | return-rate-clinic.png | 回环箭头+诊断十字（退货治理） |
+| private-domain-sop | private-domain-sop.png | 双人+对话气泡（私域触达） |
+| member-oneid-merge | member-oneid-merge.png | 三源汇聚到 ID 徽章（One-ID） |
+| price-governance | price-governance.png | 价签+盾牌对勾（价格治理） |
+| channel-health-score | channel-health-score.png | 六维雷达图（渠道体检） |
 
 ## 示例问句（每技能 3 条，用于市场页与 quickPrompts 参考）
 
@@ -96,6 +105,51 @@
 2. 详情页写"续航 48 小时""IPX8 防水"要怎么标才合规
 3. 配件耗材复购提醒按什么周期触发？延保续费节点怎么设
 
+### sports-ops 运动户外运营手册
+1. 跑鞋卖了 8 个月，复购提醒按什么里程周期触发
+2. 门店、电商、社群、赛事四拨会员怎么合成一个体系
+3. 高活跃低消费的运动社群用户怎么运营成 KOC
+
+### liquor-ops 酒类运营手册
+1. 威士忌短视频能拍倒酒和举杯吗？平台审核边界在哪
+2. 中秋礼赠档期什么时候启动？节点日历给我一份
+3. 稀缺配额款怎么管理？二级市场价格要不要盯
+
+### content-matrix-planner 种草内容矩阵
+1. 小红书月度预算 8 万，帮我排一份种草内容矩阵和达人组合
+2. 新品上市前两周，测评/教程/场景内容怎么配比
+3. 腰部达人怎么筛选？爆文率和 CPE 基准给我一份
+
+### cs-ticket-insight 客服工单洞察
+1. 这是近 30 天工单导出，帮我做归因和 SLA 达标率分析
+2. 哪些工单是升级风险？给我红橙黄分级清单
+3. 客服话术哪里要改？按高频场景给改进对照表
+
+### return-rate-clinic 退货率诊断
+1. 女装退货率 48%，帮我归因并定位高退货 SKU
+2. 大促退货比日常高 2 倍，是凑单问题还是尺码问题
+3. 退货率降 1pp 能省多少钱？治理动作按 ROI 排个序
+
+### private-domain-sop 私域触达话术
+1. 企微 1v1 沉睡 90 天客户怎么唤醒？给我三波话术
+2. 复购提醒话术怎么写不招人烦？频控规则给我一份
+3. 大促前 7 天的社群预告节奏和话术帮我排一下
+
+### member-oneid-merge 会员 One-ID 合并
+1. 天猫和门店的会员名单帮我合并成一张表，手机号为主键
+2. 没有手机号的门店会员怎么和线上对上？模糊匹配规则给我
+3. 合并质量怎么样？跨渠道重合率和冲突清单给我一份
+
+### price-governance 跨渠道价格治理
+1. 帮我核对各渠道到手价，有没有低于授权底价的破价
+2. 拼多多这家店低价出货，是窜货还是平台补贴？怎么定性
+3. 渠道间价差超过 5% 的 SKU 有哪些？价盘健康度打个分
+
+### channel-health-score 渠道健康度评分
+1. 六个渠道帮我做健康度评分，哪个该加码哪个该收缩
+2. 抖音增长快但毛利低，算什么角色？资源怎么配
+3. GMV 集中度风险大吗？第二渠道培育给个方案
+
 ## 服务类目建议（提审时后台下拉确认具体二三级）
 
 | 技能 | 建议类目方向 | 备注 |
@@ -114,8 +168,17 @@
 | fashion-ops | 电商/营销运营类 | 行业层 |
 | luxury-ops | 电商/营销运营类 | 行业层；奢品珠宝是凯淳核心行业 |
 | electronics-ops | 电商/营销运营类 | 行业层 |
+| sports-ops | 电商/营销运营类 | 行业层；运动是凯淳×阿里共创重点行业，主打 CRM 全渠道 |
+| liquor-ops | 电商/营销运营类 | 行业层；注意酒类广告合规表述不写入类目资质触发项 |
+| content-matrix-planner | 内容创作/短视频类 | 与 video-script-planner 同类目 |
+| cs-ticket-insight | 数据分析/商业智能类 | 客服质检场景，避免法律类资质 |
+| return-rate-clinic | 数据分析/商业智能类 | 与 inventory-alert 同类目 |
+| private-domain-sop | 电商/营销运营类 | 与 member-lifecycle-calendar 同类目 |
+| member-oneid-merge | 数据分析/商业智能类 | 数据清洗类，与 crm-analytics 同类目 |
+| price-governance | 电商/营销运营类 | 渠道管理类 |
+| channel-health-score | 数据分析/商业智能类 | 经营诊断类 |
 
-> 规则：每账号选 1-5 个服务类目，二三级各附资质要求；6 个技能尽量收敛到 1-2 个大类，避免触发额外资质。
+> 规则：每账号选 1-5 个服务类目，二三级各附资质要求；23 个技能收敛到 3 个大类（电商运营/数据智能/内容创作），避免触发额外资质。
 
 ## 提审日 Checklist（每技能）
 
@@ -128,8 +191,9 @@
 
 ## 组合叙事（市场页/专家介绍用）
 
-**两层架构**：通用能力层（10 技能，跨行业方法论与工具）× 行业参数层（6 技能，注入品类基准/合规红线/专属打法）。
+**三层架构**：通用能力层（10 技能，跨行业方法论与工具）× 行业参数层（6 技能，注入品类基准/合规红线/专属打法）× 全渠道运营层（7 技能，覆盖种草→转化→售后→私域→底座的全链路）。
 行业层技能的核心价值是"参数注入表"——用户先问行业手册，再用通用技能时自动带上正确参数（如美妆 T=60 天、服饰售罄率模式、奢品 VIC 分层线、电子贬值型库存）。
+全渠道层的核心价值是"链路补全"——通用层管"数据与复盘"，全渠道层管"触点与治理"（内容种草、客服、退货、私域话术、One-ID、价盘、渠道体检）。
 
 三条产品线（通用层）：
 1. **数据主线**：multi-platform-merge（合数）→ ecom-daily-report（监控）→ crm-analytics（分层）→ member-lifecycle-calendar（运营）；
@@ -137,6 +201,8 @@
 3. **护航与内容**：ad-compliance-check（合规）+ inventory-alert（供应链）+ video-script-planner（内容）。
 主线闭环：**复盘（promo-review）→ 分层（crm-analytics）→ 运营（member-lifecycle-calendar）**。
 
-行业层覆盖凯淳核心行业：美妆香氛（beauty-ops）、快时尚（fashion-ops）、奢品珠宝（luxury-ops）、消费电子（electronics-ops）；
-下一波候选：运动户外（sports-ops，主打 CRM 全渠道）、酒类（liquor-ops，威士忌业务沉淀）。
+全渠道层闭环：**种草（content-matrix-planner）→ 承接（private-domain-sop）→ 转化诊断（return-rate-clinic / cs-ticket-insight）→ 底座（member-oneid-merge / price-governance / channel-health-score）**。
+底座三件套是全渠道 CRM 的地基：One-ID 打通人、价盘治理管秩序、渠道评分定资源。
+
+行业层覆盖凯淳全部六大擅长行业：美妆香氛（beauty-ops）、快时尚（fashion-ops）、奢品珠宝（luxury-ops）、消费电子（electronics-ops）、运动户外（sports-ops，主打 CRM 全渠道）、酒类（liquor-ops，威士忌业务沉淀）。
 免费层全部公开可装；数据库直连、定时跑批、写回业务系统等企业级能力走服务端连接器（规划中）。
