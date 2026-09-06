@@ -98,10 +98,10 @@ def icon_data():
     save(img, "brand-ops-data-analyst.png")
 
 
-# ---------- 3. 会运营：人物 + 会员双心 ----------
+# ---------- 3. 会运营：人物 + 胸前会员心形徽章 + 环绕关系环 ----------
 def icon_member():
     img, d = base_canvas()
-    person(d, cx=256, head_cy=190, head_r=58, body_top=270, body_w=136, color=WHITE)
+    person(d, cx=256, head_cy=186, head_r=58, body_top=266, body_w=136, color=WHITE)
 
     def heart(d, cx, cy, r, color):
         d.ellipse([cx - r, cy - r * 0.9, cx, cy + r * 0.2], fill=color)
@@ -109,26 +109,27 @@ def icon_member():
         d.polygon([(cx - r * 0.98, cy - r * 0.1), (cx + r * 0.98, cy - r * 0.1),
                    (cx, cy + r * 1.25)], fill=color)
 
-    # 双心环绕（品牌与会员的双向关系）
-    heart(d, 150, 150, 40, WHITE)
-    heart(d, 362, 150, 40, WHITE)
-    # 连接弧线（关系纽带）
-    d.arc([110, 60, 402, 240], start=200, end=340, fill=WHITE, width=10)
+    # 胸前心形徽章（会员资产），品牌蓝心嵌套白心
+    heart(d, 256, 330, 52, BRAND)
+    heart(d, 256, 330, 34, WHITE)
+    # 左右关系环（品牌↔会员双向），避开头部
+    d.arc([96, 210, 216, 330], start=120, end=250, fill=WHITE, width=10)
+    d.arc([296, 210, 416, 330], start=290, end=60, fill=WHITE, width=10)
     save(img, "brand-ops-member-expert.png")
 
 
-# ---------- 4. 种草：人物 + 内容嫩芽 ----------
+# ---------- 4. 种草：人物 + 头顶嫩芽 + 身侧星点传播 ----------
 def icon_content():
     img, d = base_canvas()
-    person(d, cx=256, head_cy=206, head_r=58, body_top=284, body_w=134, color=WHITE)
-    # 头顶嫩芽（种草=培育内容）
-    d.line([(256, 148), (256, 92)], fill=WHITE, width=12)
-    # 两片叶
-    d.pieslice([206, 56, 268, 118], start=180, end=320, fill=WHITE)
-    d.pieslice([244, 56, 306, 118], start=180, end=360, fill=WHITE)
-    # 两侧传播波纹
-    for r, w in ((78, 8), (106, 6)):
-        d.arc([256 - r, 120 - r, 256 + r, 120 + r], start=200, end=340, fill=WHITE, width=w)
+    person(d, cx=256, head_cy=212, head_r=58, body_top=290, body_w=134, color=WHITE)
+    # 头顶嫩芽（种草=培育内容）：茎 + 两片对称叶
+    d.line([(256, 154), (256, 104)], fill=WHITE, width=12)
+    d.pieslice([200, 62, 262, 124], start=180, end=330, fill=WHITE)
+    d.pieslice([250, 62, 312, 124], start=210, end=360, fill=WHITE)
+    # 身侧传播星点（内容扩散），不再用头顶波纹
+    for sx, sy, r in ((120, 180, 12), (96, 250, 8), (392, 180, 12), (416, 250, 8),
+                      (140, 330, 7), (372, 330, 7)):
+        d.ellipse([sx - r, sy - r, sx + r, sy + r], fill=WHITE)
     save(img, "brand-ops-content-expert.png")
 
 
