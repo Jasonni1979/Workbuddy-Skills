@@ -1,0 +1,90 @@
+{
+  "name": "brand-ops-team",
+  "version": "1.0.0",
+  "description": "A five-role expert team for brand e-commerce operations: data insight, member CRM, content seeding, channel governance and industry playbooks, bundled with 23 battle-tested skills.",
+  "author": {
+    "name": "凯淳股份 WISE 技术交付中心",
+    "email": "jason@example.com"
+  },
+  "agents": [
+    "./agents/brand-ops-team-lead.md",
+    "./agents/brand-ops-data-analyst.md",
+    "./agents/brand-ops-member-expert.md",
+    "./agents/brand-ops-content-expert.md",
+    "./agents/brand-ops-channel-expert.md"
+  ],
+  "expertType": "team",
+  "agentName": "brand-ops-team-lead",
+  "teamInfo": {
+    "leadAgent": "brand-ops-team-lead",
+    "memberAgents": [
+      "brand-ops-data-analyst",
+      "brand-ops-member-expert",
+      "brand-ops-content-expert",
+      "brand-ops-channel-expert"
+    ]
+  },
+  "skills": [
+    "./skills/crm-analytics",
+    "./skills/promo-review",
+    "./skills/ad-compliance-check",
+    "./skills/competitor-review",
+    "./skills/review-insight",
+    "./skills/member-lifecycle-calendar",
+    "./skills/multi-platform-merge",
+    "./skills/inventory-alert",
+    "./skills/ecom-daily-report",
+    "./skills/video-script-planner",
+    "./skills/beauty-ops",
+    "./skills/fashion-ops",
+    "./skills/luxury-ops",
+    "./skills/electronics-ops",
+    "./skills/sports-ops",
+    "./skills/liquor-ops",
+    "./skills/content-matrix-planner",
+    "./skills/cs-ticket-insight",
+    "./skills/return-rate-clinic",
+    "./skills/private-domain-sop",
+    "./skills/member-oneid-merge",
+    "./skills/price-governance",
+    "./skills/channel-health-score"
+  ],
+  "displayName": {
+    "en": "Brand Ops Team",
+    "zh": "品牌客户运营专家团"
+  },
+  "profession": {
+    "en": "Brand E-commerce Operations Expert Team",
+    "zh": "品牌电商运营专家团"
+  },
+  "displayDescription": {
+    "en": "A five-role expert team covering data insight, member CRM, content seeding, channel governance and six industry playbooks for brand e-commerce, bundled with 23 ready-to-run skills.",
+    "zh": "品牌电商全链路运营专家团，覆盖数据洞察、会员运营、内容种草、渠道治理与六大行业打法，内置23个实战技能开箱即用。"
+  },
+  "avatar": "avatars/brand-ops-team.png",
+  "categoryId": "07-SalesCommerce",
+  "defaultInitPrompt": {
+    "en": "I run a brand e-commerce business. Review my operations data and give me action recommendations.",
+    "zh": "我是品牌电商运营负责人，帮我梳理经营数据并给出行动建议。"
+  },
+  "plugin": "brand-ops-team",
+  "tags": [
+    { "en": "E-commerce Ops", "zh": "电商运营" },
+    { "en": "Member CRM", "zh": "会员运营" },
+    { "en": "Omnichannel", "zh": "全渠道" }
+  ],
+  "quickPrompts": [
+    {
+      "en": "I run a brand e-commerce business. Review my operations data and give me action recommendations.",
+      "zh": "我是品牌电商运营负责人，帮我梳理经营数据并给出行动建议。"
+    },
+    {
+      "en": "Run a promo review for me: GMV, channel contribution, returns and next-round actions.",
+      "zh": "帮我做一次大促复盘：GMV、渠道贡献、退货情况与下一轮行动。"
+    },
+    {
+      "en": "Draft a quarterly plan for member segmentation, lifecycle marketing and private-domain outreach.",
+      "zh": "给我一份会员分群、生命周期营销与私域触达的季度运营计划。"
+    }
+  ]
+}

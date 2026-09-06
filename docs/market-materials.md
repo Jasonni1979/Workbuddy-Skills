@@ -1,8 +1,8 @@
-# 市场物料与提审清单（23 技能：通用层 10 + 行业层 6 + 全渠道层 7）
+# 市场物料与提审清单（23 技能 + 1 专家团：通用层 10 + 行业层 6 + 全渠道层 7 + brand-ops-team）
 
-> 2026-09-06 备齐（全渠道层 7 技能物料同日补齐）。头像见 `outputs/avatars/` 与仓库 `assets/avatars/`
+> 2026-09-06 备齐（全渠道层 7 技能物料同日补齐；品牌客户运营专家团同日完成）。头像见 `outputs/avatars/` 与仓库 `assets/avatars/`
 > （512×512 PNG，品牌色 #185FA5，均 <20KB，远低于 500KB 上限）；预览拼图 `_preview-grid.png`（通用 1-6）/`_preview-grid2.png`（通用 7-10）/`_preview-grid3.png`（行业层 6，左上菱形角标=行业手册系列）/`_preview-grid4.png`（全渠道层 7）。
-> 生成脚本 `outputs/make_avatars.py`（PIL，可复跑改色改形）。提审 zip 见 `dist/` 与 `outputs/`。
+> 生成脚本 `outputs/make_avatars.py`（技能）与 `outputs/make_team_avatars.py`（专家团 5 张，PIL，可复跑改色改形）。提审 zip 见 `dist/` 与 `outputs/`。
 > 企业认证通过后按本清单同日提交。
 
 ## 头像对照
@@ -32,6 +32,13 @@
 | member-oneid-merge | member-oneid-merge.png | 三源汇聚到 ID 徽章（One-ID） |
 | price-governance | price-governance.png | 价签+盾牌对勾（价格治理） |
 | channel-health-score | channel-health-score.png | 六维雷达图（渠道体检） |
+| brand-ops-team（主理人头像） | brand-ops-team.png | 人物+指挥光环+四枢纽节点+金色领结（凯队长） |
+| brand-ops-data-analyst | brand-ops-data-analyst.png | 人物+折线面板（数析） |
+| brand-ops-member-expert | brand-ops-member-expert.png | 人物+双心纽带（会运营） |
+| brand-ops-content-expert | brand-ops-content-expert.png | 人物+嫩芽波纹（种草） |
+| brand-ops-channel-expert | brand-ops-channel-expert.png | 人物+网络盾（渠道官） |
+
+> 专家团 5 张头像由 `make_team_avatars.py` 生成（人物角色隐喻，与技能图标系列区分）；提审时主头像用 `brand-ops-team.png`，成员头像暂存备用（后台如支持成员展示再用）。
 
 ## 示例问句（每技能 3 条，用于市场页与 quickPrompts 参考）
 
@@ -150,6 +157,11 @@
 2. 抖音增长快但毛利低，算什么角色？资源怎么配
 3. GMV 集中度风险大吗？第二渠道培育给个方案
 
+### brand-ops-team 品牌客户运营专家团（quickPrompts，与 plugin.json 一致）
+1. 我是品牌电商运营负责人，帮我梳理经营数据并给出行动建议。（= defaultInitPrompt）
+2. 帮我做一次大促复盘：GMV、渠道贡献、退货情况与下一轮行动。
+3. 给我一份会员分群、生命周期营销与私域触达的季度运营计划。
+
 ## 服务类目建议（提审时后台下拉确认具体二三级）
 
 | 技能 | 建议类目方向 | 备注 |
@@ -177,6 +189,7 @@
 | member-oneid-merge | 数据分析/商业智能类 | 数据清洗类，与 crm-analytics 同类目 |
 | price-governance | 电商/营销运营类 | 渠道管理类 |
 | channel-health-score | 数据分析/商业智能类 | 经营诊断类 |
+| brand-ops-team | 电商/营销运营类 | Expert Team；categoryId=07-SalesCommerce，市场页走专家团 Tab |
 
 > 规则：每账号选 1-5 个服务类目，二三级各附资质要求；23 个技能收敛到 3 个大类（电商运营/数据智能/内容创作），避免触发额外资质。
 
@@ -206,3 +219,5 @@
 
 行业层覆盖凯淳全部六大擅长行业：美妆香氛（beauty-ops）、快时尚（fashion-ops）、奢品珠宝（luxury-ops）、消费电子（electronics-ops）、运动户外（sports-ops，主打 CRM 全渠道）、酒类（liquor-ops，威士忌业务沉淀）。
 免费层全部公开可装；数据库直连、定时跑批、写回业务系统等企业级能力走服务端连接器（规划中）。
+
+**专家团封装（brand-ops-team）**：23 技能不是散装给用户，而是被一支五人专家团"包起来"。主理人凯队长负责分诊派单与口径把关，四位成员各管一域——数析（数据洞察 6 技能）、会运营（会员 CRM 4 技能）、种草（内容合规 3 技能）、渠道官（渠道治理 4 技能 + 六大行业手册）。plugin.json 的 `skills` 字段内嵌全部 23 技能，agent frontmatter 的 `skills` 字段按角色预加载子集，用户召唤一个专家团即得完整运营工具箱。这是"技能矩阵"到"组织能力"的封装：技能解决单点，专家团解决"该找谁、按什么顺序、口径怎么统一"。行业差异由渠道官在派单前先锁行业、注入参数，确保美妆不用酒类的基准。

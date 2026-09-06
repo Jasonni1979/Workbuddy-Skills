@@ -6,6 +6,8 @@
 | 2026-09-05 | crm-analytics | 1.0.0 | 加免费增值转化钩子 | 完成 | 第 4 步交付后引导企业版，每轮最多一次 |
 | 2026-09-05 | promo-review | 1.0.0 | 新建+自验 | 通过 | 纯指令型（无脚本）；frontmatter 9 字段齐；合规扫描干净 |
 | — | crm-analytics / promo-review | 1.0.0 | 提交平台审核 | 待企业认证 | zip 产物见本地 dist/（git 忽略） |
+| 2026-09-06 | brand-ops-team 专家团 | 1.0.0 | 新建+专用校验 | 通过 | team 结构（teamInfo/主理人前缀/字数/tags×3/引用路径/红线）全 PASS；zip 340KB 166 文件；内嵌 23 技能 |
+| — | brand-ops-team 专家团 | 1.0.0 | 提交平台审核 | 待企业认证 | 专家团与 23 技能同日提交；市场页走专家团 Tab |
 
 ## 自验 checklist（每次提审前必过）
 

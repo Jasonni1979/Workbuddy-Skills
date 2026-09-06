@@ -33,10 +33,11 @@ wise-workbuddy-assets/
 │   ├── price-governance/         # 全渠道层：跨渠道价格治理（标准库脚本）
 │   └── channel-health-score/     # 全渠道层：渠道健康度评分（标准库脚本）
 ├── experts/          # 专家 / 专家团插件包（.codebuddy-plugin/plugin.json）
+│   └── brand-ops-team/           # 品牌客户运营专家团（team：1 主理人 + 4 成员，内嵌 23 技能）
 ├── connectors/       # 连接器（connector-meta.json + mcp.json + icon.svg）
 ├── buddy-apps/       # Buddy 应用配置备份
 ├── docs/             # 平台规格、上架 SOP、审核记录
-├── assets/           # 市场物料：技能头像（512×512）与生成脚本 make_avatars.py
+├── assets/           # 市场物料：技能头像（512×512）与生成脚本 make_avatars.py / make_team_avatars.py
 └── dist/             # 提审 zip 产物（git 忽略，本地生成）
 ```
 
@@ -69,8 +70,8 @@ wise-workbuddy-assets/
 | member-oneid-merge 全渠道会员 One-ID 合并 | Skill | 1.0.0 | 已验证待提审（全渠道层：三层匹配+冲突裁决+合规前置，160 记录实测） | 公开市场 |
 | price-governance 跨渠道价格治理 | Skill | 1.0.0 | 已验证待提审（全渠道层：双口径到手价+五类定性+健康度评分，48 条实测） | 公开市场 |
 | channel-health-score 渠道健康度评分 | Skill | 1.0.0 | 已验证待提审（全渠道层：六维加权+角色定位+HHI，6 渠道实测） | 公开市场 |
+| brand-ops-team 品牌客户运营专家团 | Expert Team | 1.0.0 | 已验证待提审（team：凯队长+数析/会运营/种草/渠道官，内嵌 23 技能，校验 PASS） | 公开市场 |
 | （规划）CRM 数据查询 MCP | Connector | — | 规划中 P1-C | 企业市场 |
-| （规划）品牌客户运营专家团 | Expert Team | — | 规划中 P2 | 公开+企业 |
 
 ## 上架工作流
 

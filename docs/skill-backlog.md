@@ -60,6 +60,9 @@
 
 全渠道层 7 技能全部完成 ✅（2026-09-06），23 技能矩阵成型。暂缓项：livestream-review 直播复盘（用户决策缓做）。
 
+## 专家团封装（2026-09-06 完成 ✅）
+- [x] brand-ops-team 品牌客户运营专家团 — expertType=team，categoryId=07-SalesCommerce；1 主理人（凯队长：分诊派单+口径把关）+ 4 成员（数析=数据洞察 6 技能、会运营=会员 CRM 4 技能、种草=内容合规 3 技能、渠道官=渠道治理 4 技能+六大行业手册）；plugin.json `skills` 内嵌全部 23 技能路径，agent frontmatter `skills` 按角色预加载子集；5 张头像（make_team_avatars.py，人物角色隐喻）；专用校验脚本 PASS（teamInfo/主理人前缀/defaultInitPrompt=quickPrompts[0]/displayDescription 中文 48 字/tags×3/引用路径存在性/红线扫描）；zip 340KB（166 文件）
+
 ## 第三梯队 · 商业化载体（服务端，收费层）
 - [ ] CRM 数据查询 MCP 连接器（P1-C 已规划）— token 鉴权可计量计费
 - [ ] 分群运营 SOP 自动生成 — 基于 RFM 输出动作/话术/预算（服务端算法）
@@ -71,4 +74,4 @@
 ## 组合策略
 1. 技能间互相引流：promo-review → crm-analytics → member-lifecycle-calendar 形成"复盘→分层→运营"闭环
 2. 免费层纯指令快速铺量占类目，收费层全部走服务端连接器
-3. 每上 3-4 个技能后打包为专家团（品牌客户运营专家团），提升客单与粘性
+3. ~~每上 3-4 个技能后打包为专家团（品牌客户运营专家团），提升客单与粘性~~ ✅ 已落地：brand-ops-team 内嵌全部 23 技能（2026-09-06），后续技能更新需同步 experts/brand-ops-team/skills/ 副本并重打包
